@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/',function(req,res) {
-  console.log("in root /");
+  console.log("server running at port : 4000");
   res.send("Hello World");
 });
 
