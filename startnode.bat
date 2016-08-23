@@ -4,5 +4,5 @@ echo "deploy script"
 E:
 cd Deployment
 git init
-git pull 
+git pull https://github.com/poonamk/helloworld-angular-app.git
 npm install
