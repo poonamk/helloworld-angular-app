@@ -1,6 +1,11 @@
 // IMPRESSIVE!
 (function(){
   'use strict';
-  a = 10;
+  var Abv = 10;
   console.log('something impressive to do');
+  helloworld();
 })();
+function helloworld()
+{
+	console.log("hello");
+}

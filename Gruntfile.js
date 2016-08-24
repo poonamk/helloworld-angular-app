@@ -22,13 +22,21 @@ module.exports = function(grunt) {
         src: 'angular-frontend/dist/<%= pkg.name %>.js',
         dest: 'angular-frontend/dist/<%= pkg.name %>.min.js'
       }
+    },
+	jshint: {
+      // when this task is run, lint the Gruntfile and all js files in src
+      build: ['Grunfile.js', 'angular-frontend/src/*.js'],
+	  options: {
+	jshintrc: '.jshintrc.json'
+  }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-
+	 grunt.loadNpmTasks('grunt-contrib-jshint');
   // Default task(s).
  // grunt.registerTask('default', ['jshint','clean']);
   grunt.registerTask('default', ['concat', 'uglify']);
+  grunt.registerTask('jshinttest', ['jshint']);
 };
